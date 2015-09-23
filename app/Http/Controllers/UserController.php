@@ -13,6 +13,8 @@ class UserController extends Controller {
     $username = \Input::get('username');
     $password = \Input::get('password');
 
+    return 'adsf';
+
     if(\Auth::validate(['username' => $username, 'password' => $password])) {
       $user = User::where('username', $username)->first();
       if($user) {
