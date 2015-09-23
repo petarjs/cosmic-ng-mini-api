@@ -16,4 +16,5 @@ Route::get('/asdf', function () {
 });
 
 Route::post('/api/login', 'UserController@postLogin');
-Route::post('/api/accomplishments', 'AccomplishmentController@getIndex');
+Route::get('/api/accomplishments', 'AccomplishmentController@getIndex');
+Route::post('/api/accomplishments', 'AccomplishmentController@postCreate');
