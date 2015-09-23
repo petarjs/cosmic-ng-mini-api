@@ -17,7 +17,7 @@ class AccomplishmentController extends Controller
       $description = \Input::get('description');
       $user_id = \Input::get('user_id');
 
-      return Accomplishment::create([
+      return \App\Accomplishment::create([
         'description' => $description,
         'date' => $date,
         'coffees' => 0,
