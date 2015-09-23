@@ -14,7 +14,7 @@ class UserController extends Controller {
     $password = \Input::get('password');
 
     if(\Auth::validate(['username' => $username, 'password' => $password])) {
-      $user = User::where('username', $username)->first();
+      $user = \App\User::where('username', $username)->first();
       if($user) {
         $userArray = $user->toArray();
         $userArray['api_key'] = $token;
