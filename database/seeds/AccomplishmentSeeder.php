@@ -24,7 +24,7 @@ class AccomplishmentSeeder extends Seeder
           'date' => '1443049884406',
           'coffees' => 9,
           'beers' => 8,
-          'user_id' => \App\User::where('username', 'petar')->first()->id
+          'user_id' => \App\User::where('username', 'aca')->first()->id
         ]);
 
         \App\Accomplishment::create([
@@ -32,7 +32,7 @@ class AccomplishmentSeeder extends Seeder
           'date' => '1443003000000',
           'coffees' => 3,
           'beers' => 4,
-          'user_id' => \App\User::where('username', 'petar')->first()->id
+          'user_id' => \App\User::where('username', 'aca')->first()->id
         ]);
     }
 }
