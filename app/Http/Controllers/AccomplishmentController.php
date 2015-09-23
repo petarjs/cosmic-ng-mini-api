@@ -8,5 +8,7 @@ use App\Http\Controllers\Controller;
 
 class AccomplishmentController extends Controller
 {
-    //
+    public function getIndex() {
+      return \App\Accomplishment::all();
+    }
 }
