@@ -12,7 +12,7 @@ class CreateAccomplishmentsTable extends Migration
      */
     public function up()
     {
-        Schema::table('accomplishments', function (Blueprint $table) {
+        Schema::create('accomplishments', function (Blueprint $table) {
             $table->increments('id');
             $table->string('description');
             $table->integer('beers');
@@ -30,8 +30,6 @@ class CreateAccomplishmentsTable extends Migration
      */
     public function down()
     {
-        Schema::table('accomplishments', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('accomplishments');
     }
 }
