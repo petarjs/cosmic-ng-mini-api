@@ -9,6 +9,6 @@ use App\Http\Controllers\Controller;
 class AccomplishmentController extends Controller
 {
     public function getIndex() {
-      return \App\Accomplishment::with('user');
+      return \App\Accomplishment::with('user')->get();
     }
 }
