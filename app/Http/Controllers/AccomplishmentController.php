@@ -25,4 +25,17 @@ class AccomplishmentController extends Controller
         'user_id' => $user_id
       ]);
     }
+
+    public function postType($id) {
+      $type = \Input::get('type');
+
+      $acc = \App\Accomplishment::find($id);
+
+      if($acc) {
+        $acc->{$type} = $acc->{$type} + 1;
+        $acc->save();
+        return $acc; 
+      }
+
+    }
 }
