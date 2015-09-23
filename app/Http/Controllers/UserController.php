@@ -20,7 +20,6 @@ class UserController extends Controller {
         $userArray['api_key'] = $token;
         return $userArray;
       } else {
-        return 'asdf';
         return response()->json(['error' => 'Incorrect credentials']);
       }
     }
