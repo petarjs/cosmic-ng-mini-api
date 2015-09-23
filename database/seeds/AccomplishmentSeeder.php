@@ -15,21 +15,24 @@ class AccomplishmentSeeder extends Seeder
           'description' => 'Woke up at 8:45 this morning!',
           'date' => '1443089400000',
           'coffees' => 13,
-          'beers' => 1
+          'beers' => 1,
+          'user_id' => \App\User::where('username', 'petar')->first()->id
         ]);
 
         \App\Accomplishment::create([
           'description' => 'Programmed for 8 hours straight :O',
           'date' => '1443049884406',
           'coffees' => 9,
-          'beers' => 8
+          'beers' => 8,
+          'user_id' => \App\User::where('username', 'petar')->first()->id
         ]);
 
         \App\Accomplishment::create([
           'description' => 'Read a book',
           'date' => '1443003000000',
           'coffees' => 3,
-          'beers' => 4
+          'beers' => 4,
+          'user_id' => \App\User::where('username', 'petar')->first()->id
         ]);
     }
 }
