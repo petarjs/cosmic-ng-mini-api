@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 
 Route::post('/api/login', 'postLogin@UserController');
+Route::get('/api', function() {
+  return 'login';
+});
