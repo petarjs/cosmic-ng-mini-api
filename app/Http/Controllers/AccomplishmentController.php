@@ -26,7 +26,7 @@ class AccomplishmentController extends Controller
       ]);
     }
 
-    public function postType($id) {
+    public function putType($id) {
       $type = \Input::get('type') . 's';
 
       $acc = \App\Accomplishment::find($id);
